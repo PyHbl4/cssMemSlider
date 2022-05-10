@@ -1,0 +1,95 @@
+@import url(./reset.css);
+body {
+    background-color: #292929;
+}
+.slider__wrapper {
+    width: 100%;
+    margin-top: 10vh;
+}
+.slider__controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 1%;
+    height: 100px;
+}
+.slider__btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 4px solid aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+label {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 30px;
+    height: 100%;
+}
+label div {
+    width: 100%;
+    height: 30px;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+}
+input {
+    position: absolute;
+    visibility: hidden;
+}
+.slider__container {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+.slide2, .slide3, .slide4, .slide5 {
+    position: absolute;
+    top: 0px;
+}
+.slides {
+    width: 100%;
+    
+    border-radius: 70px;
+}
+.slides img {
+    width: 100%;
+    opacity: 0;
+}
+#slide1:checked ~ .slider__controls .btn1 {
+    background-color: #fff;
+}
+#slide2:checked ~ .slider__controls .btn2 {
+    background-color: #fff;
+}
+#slide3:checked ~ .slider__controls .btn3 {
+    background-color: #fff;
+}
+#slide4:checked ~ .slider__controls .btn4 {
+    background-color: #fff;
+}
+#slide5:checked ~ .slider__controls .btn5 {
+    background-color: #fff;
+}
+label:hover div {
+    background-color: bisque;
+}
+#slide1:checked ~ .slider__container .slide1 img {
+    opacity: 1;
+}
+#slide2:checked ~ .slider__container .slide2 img {
+    opacity: 1;
+}
+#slide3:checked ~ .slider__container .slide3 img {
+    opacity: 1;
+}
+#slide4:checked ~ .slider__container .slide4 img {
+    opacity: 1;
+}
+#slide5:checked ~ .slider__container .slide5 img {
+    opacity: 1;
+}
