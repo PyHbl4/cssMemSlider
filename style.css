@@ -23,7 +23,6 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    margin-top: 1%;
     height: 100px;
 }
 .slider__btn {
@@ -39,7 +38,7 @@ h1 {
 label {
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     cursor: pointer;
     width: 30px;
     height: 100%;
@@ -66,19 +65,19 @@ input {
     opacity: 0;
     transform: scale(0.95);
 }
-#slide1:checked ~ .slider__controls .btn1 {
+#slide1:checked ~ .slider__low .slider__controls .btn1 {
     background-color: #fff;
 }
-#slide2:checked ~ .slider__controls .btn2 {
+#slide2:checked ~ .slider__low .slider__controls .btn2 {
     background-color: #fff;
 }
-#slide3:checked ~ .slider__controls .btn3 {
+#slide3:checked ~ .slider__low .slider__controls .btn3 {
     background-color: #fff;
 }
-#slide4:checked ~ .slider__controls .btn4 {
+#slide4:checked ~ .slider__low .slider__controls .btn4 {
     background-color: #fff;
 }
-#slide5:checked ~ .slider__controls .btn5 {
+#slide5:checked ~ .slider__low .slider__controls .btn5 {
     background-color: #fff;
 }
 label:hover div {
@@ -104,6 +103,79 @@ label:hover div {
     opacity: 1;
     transform: scale(1);
 }
+.slider__low {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+.slider__descriptions {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 500px;
+}
+.slider__descriptions .slider__description {
+    position: absolute;
+    top: 0em;
+    opacity: 0;
+    transform: scale(0.95);
+}
+.slider__description {
+    font-size: 2em;
+    color: antiquewhite;
+}
+#slide1:hover ~ .slider__low .slider__descriptions #slider__description1 {
+    opacity: 0.2;
+    transform: scale(0.95);
+    top: 1em;
+}
+#slide2:hover ~ .slider__low .slider__descriptions #slider__description2 {
+    opacity: 0.2;
+    transform: scale(0.95);
+    top: 1em;
+}
+#slide3:hover ~ .slider__low .slider__descriptions #slider__description3 {
+    opacity: 0.2;
+    transform: scale(0.95);
+    top: 1em;
+}
+#slide4:hover ~ .slider__low .slider__descriptions #slider__description4 {
+    opacity: 0.2;
+    transform: scale(0.95);
+    top: 1em;
+}
+#slide5:hover ~ .slider__low .slider__descriptions #slider__description5 {
+    opacity: 0.2;
+    transform: scale(0.95);
+    top: 1em;
+}
+#slide1:checked ~ .slider__low .slider__descriptions #slider__description1 {
+    opacity: 1;
+    transform: scale(1);
+    top: 0em;
+}
+#slide2:checked ~ .slider__low .slider__descriptions #slider__description2 {
+    opacity: 1;
+    transform: scale(1);
+    top: 0em;
+}
+#slide3:checked ~ .slider__low .slider__descriptions #slider__description3 {
+    opacity: 1;
+    transform: scale(1);
+    top: 0em;
+}
+#slide4:checked ~ .slider__low .slider__descriptions #slider__description4 {
+    opacity: 1;
+    transform: scale(1);
+    top: 0em;
+}
+#slide5:checked ~ .slider__low .slider__descriptions #slider__description5 {
+    opacity: 1;
+    transform: scale(1);
+    top: 0em;
+}
+
 @media (max-width: 650px) {
     h1 {
         font-size: 2em;
